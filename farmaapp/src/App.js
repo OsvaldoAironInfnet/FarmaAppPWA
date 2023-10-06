@@ -21,7 +21,7 @@ function App() {
         {
           routes.map((route, idx) => (
             console.log(route.path),
-            <Route key={`${idx}_rotas`} exact path={route.path} element={<route.element firebaseApp={firebaseApp} setCurrentPath={setCurrentPath}/>} />
+            <Route key={`${idx}_rotas`} exact path={route.path} element={<route.element firebaseApp={firebaseApp} setCurrentPath={setCurrentPath}/>}  />
           ))
         }
       </Routes>
