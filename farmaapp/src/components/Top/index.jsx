@@ -6,12 +6,12 @@ const Top = ({ title, subtitle, hasMenu, hasArrowBack, hasImage }) => {
            
         >
             <TopMenuComponent hasMenu={hasMenu} hasArrowBack={hasArrowBack} hasImage={hasImage} />
-            <TypographyComponent variant="h1" component="h1" sx={{
+            <TypographyComponent style = {{color: "#fff"}} variant="h1" component="h1" sx={{
                 fontSize: "3rem",
             }}>
                 {title}
             </TypographyComponent>
-            <TypographyComponent variant="h6" component="h6">
+            <TypographyComponent style = {{color: "#fff"}} variant="h6" component="h6">
                 {subtitle}
             </TypographyComponent>
             <div style={{
