@@ -5,6 +5,8 @@ import hightlighttwo from '../../../assets/destaque_highlight2.png'
 import categoryMed from '../../../assets/categoria_medicamento.png'
 import categorySup from '../../../assets/categoria_suplementos.png'
 import categoryBel from '../../../assets/categoria_beleza.png'
+import hightsem1 from '../../../assets/hightsemanal_1.png'
+import hightsem2 from '../../../assets/hightsemanal_2.png'
 
 import { useNavigate, Link } from "react-router-dom";
 import { AuthTopHomeComponent } from "./components/index"
@@ -27,6 +29,11 @@ const HomeScreen = ({ setCurrentPath, loggoutRoutes, firebaseApp }) => {
     { imageCategory: categorySup, label: 'Suplementos' },
     { imageCategory: categoryBel, label: 'Beleza' }
   ]
+
+  const dataHighLightSem = [
+    {imageProductHighLight: hightsem1},
+    {imageProductHighLight: hightsem2},
+  ];
 
   return <>
     <div
@@ -91,6 +98,25 @@ const HomeScreen = ({ setCurrentPath, loggoutRoutes, firebaseApp }) => {
           })}
         </tr>
       </table>
+      <br/>
+      <TypographyComponent style={{ color: "#fff" }} variant="h1" component="h1" sx={{
+        fontSize: 24,
+        pl: 2
+      }}>
+        {"Destaques da semana"}
+      </TypographyComponent>
+      <table>
+        <tr>
+          {dataHighLightSem.map((val) => {
+            return (
+              <td>
+                <img src={val.imageProductHighLight} alt="HighLights" height={200} width={150} style={{ paddingLeft: '12px' }} />
+              </td>
+            )
+          })}
+        </tr>
+      </table>
+
     </div>
 
 
