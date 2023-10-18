@@ -7,6 +7,7 @@ import categorySup from '../../../assets/categoria_suplementos.png'
 import categoryBel from '../../../assets/categoria_beleza.png'
 import hightsem1 from '../../../assets/hightsemanal_1.png'
 import hightsem2 from '../../../assets/hightsemanal_2.png'
+import footer from '../../../assets/bottomActionBar.png'
 
 import { useNavigate, Link } from "react-router-dom";
 import { AuthTopHomeComponent } from "./components/index"
@@ -116,10 +117,9 @@ const HomeScreen = ({ setCurrentPath, loggoutRoutes, firebaseApp }) => {
           })}
         </tr>
       </table>
-
+      <br/>
+      <img src={footer} alt="footer" />
     </div>
-
-
   </>
 }
 
